@@ -83,3 +83,8 @@ ROP là một kỹ thuật tấn công tận dụng các đoạn code có sẵn 
   * IP trỏ tới vị trí mà SP trỏ tới - chính là \<address của gadget n\>. Hay có thể nói là lúc này chương trình sẽ nhảy tới thực thi chuỗi các lệnh của gadget n.
   
   * SP tăng - trỏ tới đâu ta không cần quan tâm nữa - bởi vì lúc này toàn bộ các lệnh của các gadget đã được thực thi - tương đương với việc chúng ta đã thực thi shellcode thành công.
+
+### Nếu tự tin rằng bản thân đã thấm nhuần được toàn bộ nội dung bên trên, ta thử giải một challenge cho vui:
+
+#### [chall](./chall) (source: [chall.c](./chall.c))
+
