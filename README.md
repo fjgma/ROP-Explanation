@@ -28,7 +28,7 @@ ROP là một kỹ thuật tấn công tận dụng các đoạn code có sẵn 
 
 * push \<return address\> (address của lệnh ngay sau lệnh call \<function\>, tức là lệnh sẽ được thực thi sau khi kết thúc \<function\>) vào stack.
 
-* Gán IP bằng địa chỉ của \<function\>.
+* Gán IP bằng address của \<function\>.
 
 #### ret (lệnh ret là mấu chốt của ROP, cần hiểu cơ chế của lệnh pop đã nói ở trên để hiểu rõ lệnh ret):
 
@@ -169,7 +169,7 @@ End of assembler dump.
 
 Thật may mắn, không có dấu răng nào của Canary trong hàm vuln cả - chúng ta có thể ghi đè return address một cách vô tư (trường hợp có check canary thì vẫn có thể leak được canary nếu canary đó chưa đủ xịn).
 
-Ta dễ dàng nhận thấy phần padding cần 0x14 = 20 byte. Tiếp sau đó lần lượt là address của các gadget, làm sao để có nhỉ? Dump file sang assembly, ăn cơm thật no rồi ngồi tìm. Đấy là câu chuyện thuở sơ khai, hiện tại chúng ta có những công cụ xịn xò tự động tìm địa chỉ các gadget giúp chúng ta - ở đây mình dùng [ROPgadget](https://github.com/JonathanSalwan/ROPgadget):
+Ta dễ dàng nhận thấy phần padding cần 0x14 = 20 byte. Tiếp sau đó lần lượt là address của các gadget, làm sao để có nhỉ? Dump file sang assembly, ăn cơm thật no rồi ngồi tìm. Đấy là câu chuyện thuở sơ khai, hiện tại chúng ta có những công cụ xịn xò tự động tìm address của các gadget giúp chúng ta - ở đây mình dùng [ROPgadget](https://github.com/JonathanSalwan/ROPgadget):
 
 ```
 kali@kali:~/Desktop/ROP$ ROPgadget --binary=chall --ropchain --badbytes="0a"
@@ -287,4 +287,4 @@ $
 [*] Got EOF while sending in interactive
 ```
 
-Mọi người thi tốt nhóoo <3
+Mọi người thi tốt nhó <3 <3 <3 <3 <3 <3 <3 <3 <3 <3.
