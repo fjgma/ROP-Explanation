@@ -18,7 +18,7 @@ ROP là một kỹ thuật tấn công tận dụng các đoạn code có sẵn 
 
 #### Instruction Pointer (IP):  Trỏ tới lệnh đang thực thi trên stack.
 
-#### Stack Pointer (SP): Trỏ tới đỉnh stack (đỉnh ở đây được hiểu là đỉnh của các lệnh - nói cho dễ hiểu là SP trỏ tới lệnh gần nhất cần phải thực thi).
+#### Stack Pointer (SP): Trỏ tới đỉnh stack (đỉnh ở đây được hiểu là đỉnh của các lệnh - có nghĩa là SP trỏ tới lệnh gần nhất cần phải thực thi).
 
 #### push \<value\>: giảm SP và đẩy \<value\> vào vị trí SP trỏ tới.
   
